@@ -8,7 +8,7 @@ export function Listitem({ children, id, type }) {
       <li className="list-item">
         <span className="list-content">{children}</span>
         {type !== "todo" && (
-          <button className="btn" onClick={() => handleTodoClick(type)(id)}>
+          <button className="btn" onClick={() => handleTodoClick(id)}>
             Todo
           </button>
         )}
@@ -18,7 +18,7 @@ export function Listitem({ children, id, type }) {
           </button>
         )}
         {type !== "done" && (
-          <button className="btn" onClick={() => handleDoneClick(type)(id)}>
+          <button className="btn" onClick={() => handleDoneClick(id)}>
             Done
           </button>
         )}
